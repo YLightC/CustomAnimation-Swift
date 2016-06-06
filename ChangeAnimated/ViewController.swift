@@ -125,10 +125,12 @@ class ViewController: UIViewController {
     func tapLogInButton() {
         if userIdTextField.text?.characters.count <= 10 {
             shakeLogInButton(LogInButton)
+            return
         }
         
         if passwordTextField.text?.characters.count <= 6 || passwordTextField.text?.characters.count > 20 {
             shakeLogInButton(LogInButton)
+            return
         }
         
         InfoLabel.hidden = false
